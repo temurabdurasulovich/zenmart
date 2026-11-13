@@ -216,7 +216,9 @@
 }
 
 .navbar_bott_menu_box .navbar_route_menu {
-  width: 670px;
+  /* margin-left: 20px; */
+  margin-left: 20px;
+  width: 600px;
   display: flex;
   flex-direction: row;
 }
@@ -235,10 +237,15 @@
 }
 
 .sorting_menu span {
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  margin-right: 20px;
   color: rgba(255, 255, 255, 1);
 
   font-family: "Jost";
   font-size: 16px;
   font-weight: 400;
+}
+
+.sorting_menu {
+  margin-right: 60px;
 }
