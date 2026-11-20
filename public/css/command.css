@@ -393,7 +393,7 @@ p {
   cursor: pointer;
 }
 
-.container.product_box .product_img_box {
+.container .product_box .product_img_box {
   width: 100%;
   height: 280px;
 }
