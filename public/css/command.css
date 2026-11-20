@@ -359,6 +359,14 @@ p {
   border-radius: 50%;
 }
 
+.container .hover_border {
+  margin-top: 3px;
+  width: 32px;
+  height: 2px;
+  background: rgba(4, 30, 66, 1);
+}
+
+/* HEADER */
 .header_frame {
   position: relative;
   margin-top: 47px;
@@ -507,13 +515,6 @@ p {
   font-size: 15px;
   font-weight: 500;
   line-height: 22px;
-}
-
-.header_frame .box_left .hover_border {
-  margin-top: 3px;
-  width: 32px;
-  height: 2px;
-  background: rgba(4, 30, 66, 1);
 }
 
 .header_frame .header_box .box_right {
