@@ -107,6 +107,7 @@
 
 .container .next_prev_box {
   width: 25px;
+  z-index: 9;
 }
 
 .container .next_prev_box img {
@@ -557,6 +558,7 @@
   height: 452px;
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
 }
 
 .home_page .adv_frame {
