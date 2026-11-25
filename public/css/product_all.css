@@ -1,0 +1,354 @@
+.shop_page {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =====================================================================
+   CLAUDE: SHOP PAGE (product/all.html) — shu qatordan pastini Claude yozgan.
+   Faqat shu sahifaga tegishli klasslar. Yuqoridagi .shop_page kodiga
+   tegilmagan. Global klasslar (product_card, pagination ...) command.css da.
+   ===================================================================== */
+
+/* CLAUDE: 1. Category slider — tepadagi kategoriya menyusi */
+.category_slider_frame {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px solid rgba(234, 234, 234, 1);
+  background: rgba(255, 255, 255, 1);
+}
+
+.category_slider_frame .container {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category_slider_frame .category_slider_link {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: rgba(4, 30, 66, 1);
+  transition: color 0.2s ease;
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.category_slider_frame .category_slider_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background: rgba(4, 30, 66, 1);
+  transition: width 0.3s ease;
+}
+
+.category_slider_frame .category_slider_link:hover::after,
+.category_slider_frame .category_slider_link.active::after {
+  width: 100%;
+}
+
+/* CLAUDE: 3. Shop banner */
+.shop_banner_frame {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.shop_banner_frame .container {
+  flex-direction: row;
+}
+
+.shop_banner_frame .shop_banner_box {
+  position: relative;
+  width: 100%;
+  height: 424px;
+  padding: 47px 75px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background: rgba(243, 245, 246, 1) url(../images/icons/shop_header_bg.png)
+    center / cover no-repeat;
+}
+
+.shop_banner_box .shop_banner_content {
+  width: 367px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop_banner_content .shop_banner_title {
+  color: rgba(4, 30, 66, 1);
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 37px;
+}
+
+.shop_banner_content .shop_banner_desc {
+  margin-top: 19px;
+  color: rgba(4, 30, 66, 1);
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.shop_banner_content .btn_yellow {
+  margin-top: 19px;
+}
+
+.shop_banner_box .banner_dots {
+  position: absolute;
+  left: 119px;
+  bottom: 37px;
+}
+
+/* CLAUDE: 4. Shop by Category */
+.shop_by_category_frame {
+  position: relative;
+  margin-top: 42px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.shop_by_category_frame .container {
+  flex-direction: column;
+}
+
+.shop_by_category_frame .shop_category_wrapper {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.shop_category_wrapper .shop_category_box {
+  width: 141px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.shop_category_box .shop_category_img_box {
+  width: 141px;
+  height: 150px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(234, 234, 234, 1);
+  border-radius: 150px;
+  background: rgba(255, 255, 255, 1);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.shop_category_img_box img {
+  transition: transform 0.3s ease;
+}
+
+.shop_category_box:hover .shop_category_img_box {
+  border-color: rgba(68, 50, 151, 1);
+  box-shadow: 0px 5px 20px 0px rgba(68, 50, 151, 0.1);
+}
+
+.shop_category_box:hover .shop_category_img_box img {
+  transform: scale(1.08);
+}
+
+.shop_category_box span {
+  margin-top: 15px;
+  width: 170px;
+  color: rgba(4, 30, 66, 1);
+  text-align: center;
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+/* CLAUDE: 5. Shop by brand — Apple, Dell ... tugmalari */
+.shop_by_brand_frame {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.shop_by_brand_frame .container {
+  flex-direction: column;
+}
+
+.shop_by_brand_frame .brand_wrapper {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.brand_wrapper .brand_btn {
+  height: 52px;
+  padding: 15px 35px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(234, 234, 234, 1);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 1);
+  color: rgba(4, 30, 66, 1);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.brand_wrapper .brand_btn:hover,
+.brand_wrapper .brand_btn.active {
+  border-color: rgba(68, 50, 151, 1);
+  background: rgba(68, 50, 151, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+/* CLAUDE: 6. Top Selling Products */
+.top_selling_frame {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.top_selling_frame .container {
+  flex-direction: column;
+}
+
+.top_selling_frame .top_selling_wrapper {
+  margin-top: 30px;
+  width: 1319px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* CLAUDE: 7. Product list — filtrlar + mahsulotlar + pagination */
+.product_list_frame {
+  position: relative;
+  margin-top: 65px;
+  padding-bottom: 72px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product_list_frame .container {
+  flex-direction: column;
+}
+
+.product_list_frame .product_list_head {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(234, 234, 234, 1);
+}
+
+.product_list_head p {
+  color: rgba(4, 30, 66, 1);
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.product_list_frame .filter_wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+
+.filter_wrapper .filter_btn {
+  height: 36px;
+  padding: 7px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  border-radius: 60px;
+  background: rgba(243, 245, 246, 1);
+  color: rgba(4, 30, 66, 1);
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.filter_wrapper .filter_btn img {
+  width: 9px;
+}
+
+.filter_wrapper .filter_btn:hover {
+  background: rgba(234, 234, 234, 1);
+}
+
+.product_list_frame .product_grid {
+  margin-top: 20px;
+  width: 1315px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.product_grid .product_card {
+  margin-bottom: -1px; /* qatorlar orasidagi border ustma-ust tushadi */
+}

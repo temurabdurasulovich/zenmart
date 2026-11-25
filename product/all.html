@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zenmart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Playwrite+IE+Guides&family=Playwrite+TZ+Guides&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../public/css/command.css" />
+    <link rel="stylesheet" href="../public/css/product_all.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="navbar_frame">
+      <div class="container">
+        <div class="navbar_top">
+          <a href="../index.html"
+            ><img src="../public/images/icons/logo.png" />
+          </a>
+
+          <div class="nav_search_frame">
+            <div class="search_box">
+              <div class="category_list">
+                <select name="" id="">
+                  <option value="All" selected>All Categories</option>
+                  <option value="computer">Computer</option>
+                </select>
+              </div>
+              <input type="text" placeholder="Search products..." />
+            </div>
+            <div class="search_icon_box">
+              <img src="../public/images/icons/search.svg" />
+            </div>
+          </div>
+
+          <div class="nav_top_menu">
+            <a href="../order/cart.html">
+              <div class="top_manu_box">
+                <div class="icon_box">
+                  <img src="../public/images/icons/heart.svg" />
+                </div>
+                <div class="info_box">
+                  <span>Wishlist</span>
+                  <strong>My Items</strong>
+                </div>
+              </div>
+            </a>
+
+            <div></div>
+            <div></div>
+          </div>
+
+          <div class="nav_top_menu">
+            <a href="../other/login.html">
+              <div class="top_manu_box">
+                <div class="icon_box">
+                  <img src="../public/images/icons/profile.svg" />
+                </div>
+                <div class="info_box">
+                  <span>Sign In</span>
+                  <strong>Account</strong>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="nav_top_menu">
+            <a href="../order/cart.html">
+              <div class="top_manu_box">
+                <div class="icon_box">
+                  <div class="basket_count">2</div>
+                  <img src="../public/images/icons/shopping-cart.svg" />
+                </div>
+                <div class="info_box">
+                  <span>$200.99</span>
+                  <strong>Total</strong>
+                </div>
+              </div>
+            </a>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="navbar_bott">
+          <div class="navbar_bott_menu_box">
+            <div class="browse_box">
+              <img src="../public/images/icons/browse.svg" />
+              <span>Browse Categories</span>
+            </div>
+            <div class="navbar_route_menu">
+              <a href="../index.html">Home</a>
+              <a href="./all.html" class="title">Shop</a>
+              <a href="../order/cart.html">Orders</a>
+              <a href="../other/about.html">About</a>
+              <a href="../other/contact.html">Contact</a>
+            </div>
+
+            <div class="sorting_menu">
+              <span>Deal of the Day</span>
+              <span>Hot Deals</span>
+              <span>Best Sellers</span>
+              <span>New Arrivals</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shop_page">
+      <!-- ================================================================
+           CLAUDE: SHOP PAGE (product/all.html) — shu blok ichidagi hamma
+           kodni Claude yozgan. Har bir bo'lim alohida *_frame > .container.
+           Global (qayta ishlatiladigan) klasslar: public/css/command.css
+           Faqat shu sahifaga tegishli klasslar: public/css/product_all.css
+           ================================================================ -->
+
+      <!-- CLAUDE: 1. Category slider — sahifa tepasidagi kategoriya menyusi -->
+      <div class="category_slider_frame">
+        <div class="container">
+          <a href="#" class="category_slider_link">All Electronics</a>
+          <a href="#" class="category_slider_link">Smart TV</a>
+          <a href="#" class="category_slider_link active">Laptops</a>
+          <a href="#" class="category_slider_link">Cell Phones</a>
+          <a href="#" class="category_slider_link">Camera &amp; Photo</a>
+          <a href="#" class="category_slider_link">Portable Audio</a>
+          <a href="#" class="category_slider_link">Computers</a>
+          <a href="#" class="category_slider_link">iPad &amp; Tablets</a>
+          <a href="#" class="category_slider_link">Pc Gaming</a>
+          <a href="#" class="category_slider_link">Smart Home</a>
+          <a href="#" class="category_slider_link">Headphones</a>
+        </div>
+      </div>
+
+      <!-- CLAUDE: 2. Breadcrumb — "Home / Electronics / ..." yo'l ko'rsatkich -->
+      <div class="breadcrumb_frame">
+        <div class="container">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <a href="./all.html">Electronics</a>
+          <span>/</span>
+          <a href="./all.html">Computers</a>
+          <span>/</span>
+          <a href="./all.html" class="active">Desktop Computers</a>
+        </div>
+      </div>
+
+      <!-- CLAUDE: 3. Shop banner — rasmli katta banner -->
+      <div class="shop_banner_frame">
+        <div class="container">
+          <div class="shop_banner_box">
+            <div class="shop_banner_content">
+              <span class="shop_banner_title">Save up to $130 on select laptops.</span>
+              <p class="shop_banner_desc">
+                All kind of products in one place. Starts from $1. Get cashbacks
+                &amp; offers
+              </p>
+              <a href="./chosenproduct.html" class="btn_yellow">Shop Deals</a>
+            </div>
+
+            <!-- CLAUDE: banner pastidagi nuqtalar + strelka (global: .slider_dots) -->
+            <div class="slider_dots banner_dots">
+              <div class="slider_dot_wrapper">
+                <div class="slider_dot"><div></div></div>
+                <div class="slider_dot"><div></div></div>
+                <div class="slider_dot active"><div></div></div>
+                <div class="slider_dot"><div></div></div>
+                <div class="slider_dot"><div></div></div>
+              </div>
+              <img src="../public/images/icons/arrow-prev_next.svg" class="slider_arrow" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLAUDE: 4. Shop by Category -->
+      <div class="shop_by_category_frame">
+        <div class="container">
+          <!-- global: .section_head / .section_title / .view_all_link -->
+          <div class="section_head">
+            <span class="section_title">Shop by Category</span>
+            <a href="./all.html" class="view_all_link">View All Categories</a>
+          </div>
+          <div class="shop_category_wrapper">
+          <a href="./all.html" class="shop_category_box">
+            <div class="shop_category_img_box">
+              <img src="../public/images/category/tv.png" />
+            </div>
+            <span>TVs, Home Theatre,<br />and Accessories</span>
+          </a>
+          <a href="./all.html" class="shop_category_box">
+            <div class="shop_category_img_box">
+              <img src="../public/images/category/computer.png" />
+            </div>
+            <span>Computers, Tablets,<br />and Accessories</span>
+          </a>
+          <a href="./all.html" class="shop_category_box">
+            <div class="shop_category_img_box">
+              <img src="../public/images/category/smart.png" />
+            </div>
+            <span>Smart<br />Home</span>
+          </a>
+          <a href="./all.html" class="shop_category_box">
+            <div class="shop_category_img_box">
+              <img src="../public/images/category/headphone.png" />
+            </div>
+            <span>Headphones and<br />Portable Speakers</span>
+          </a>
+          <a href="./all.html" class="shop_category_box">
+            <div class="shop_category_img_box">
+              <img src="../public/images/category/phone.png" />
+            </div>
+            <span>Cell Phones and<br />Accessories</span>
+          </a>
+          <a href="./all.html" class="shop_category_box">
+            <div class="shop_category_img_box">
+              <img src="../public/images/category/game.png" />
+            </div>
+            <span>Video Games, Consoles,<br />and Accessories</span>
+          </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLAUDE: 5. Shop by brand — hover/active holatli brend tugmalari -->
+      <div class="shop_by_brand_frame">
+        <div class="container">
+          <div class="section_head">
+            <span class="section_title">Shop by brand</span>
+          </div>
+          <div class="brand_wrapper">
+          <a href="#" class="brand_btn active">Apple</a>
+          <a href="#" class="brand_btn">Dell</a>
+          <a href="#" class="brand_btn">Hp</a>
+          <a href="#" class="brand_btn">Lenovo</a>
+          <a href="#" class="brand_btn">Samsung</a>
+          <a href="#" class="brand_btn">Asus</a>
+          <a href="#" class="brand_btn">Acer</a>
+          <a href="#" class="brand_btn">Sony</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLAUDE: 6. Top Selling Products — hammasi chosenproduct.html ga olib boradi -->
+      <div class="top_selling_frame">
+        <div class="container">
+          <div class="section_head">
+            <span class="section_title">Top Selling Products</span>
+            <div class="slider_dots">
+              <div class="slider_dot_wrapper">
+                <div class="slider_dot"><div></div></div>
+                <div class="slider_dot"><div></div></div>
+                <div class="slider_dot active"><div></div></div>
+                <div class="slider_dot"><div></div></div>
+                <div class="slider_dot"><div></div></div>
+              </div>
+              <img src="../public/images/icons/arrow-prev_next.svg" class="slider_arrow" />
+            </div>
+          </div>
+          <!-- global: .product_card (kichik varianti) -->
+          <div class="top_selling_wrapper">
+          <div class="product_card">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/acer_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Samsung</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Acer Aspire 5 15.6" Laptop - Silver (Intel Core i7-1165G7/512GB SSD/12GB RAM/Windows 11)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/nitro_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Sony</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Acer Nitro 5 15.6" Gaming Laptop - Black (Intel Core i5-10300H/512GB SSD/12GB RAM/GTX 1650)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/sony_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Sony</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Microsoft Surface Laptop Go 12.4" Multi-Touch - Intel Core i5, 8GB RAM, 128GB SSD, Windows
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$399.00</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/acer_silver.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Eastsport</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Acer Aspire 5 15.6" Laptop - Silver (Intel Core i5-1135G7/512GB SSD/8GB RAM/Windows 11)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/asus_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Rolex</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                ASUS VivoBook 15 X515 15.6" Laptop - Slate Grey (Intel Core i3-1005G1/256GB SSD/8GB RAM/Win 11)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$18.124</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/rolex_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Rolex</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                ASUS ROG Strix G15 15.6" Gaming Laptop (AMD Ryzen 7 4800H/512GB SSD/16GB RAM/GeForce RTX 3070)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$18.124</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLAUDE: 7. Product list — sarlavha, filtrlar, 20 ta mahsulot, pagination -->
+      <div class="product_list_frame">
+        <div class="container">
+          <div class="product_list_head">
+            <span class="section_title">Laptops and Accessories</span>
+            <p>
+              Shop laptops, desktops, monitors, tablets, PC gaming, hard drives
+              and storage, accessories and more
+            </p>
+          </div>
+
+          <div class="filter_wrapper">
+          <button class="filter_btn">
+            Price
+            <img src="../public/images/icons/arrow_down.svg" />
+          </button>
+          <button class="filter_btn">
+            Brand
+            <img src="../public/images/icons/arrow_down.svg" />
+          </button>
+          <button class="filter_btn">
+            Color
+            <img src="../public/images/icons/arrow_down.svg" />
+          </button>
+          </div>
+
+          <!-- global: .product_card + .card_large (katta varianti) -->
+          <div class="product_grid">
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/sony_notebook.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Lenovo</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Lenovo IdeaPad 3 15.6" Laptop - Sand (Intel Core i7-1165G7/512GB SSD/12GB RAM/Windows 11)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$899.99</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/rolex_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Asus</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                ASUS TUF Dash 15 15.6" Gaming Laptop - Grey (Intel Core i7-11370H/512GB SSD/16GB RAM/RTX 3060/Win11)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$399.00</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/macbook_16.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Eastsport</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Apple MacBook Air 13.3" w/ Touch ID (Fall 2020) - Space Grey (Apple M1 Chip / 256GB SSD / 8GB RAM)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/acer_silver.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Rolex</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                HP 14" Laptop - Silver (Intel Core i3-1115G4/512GB SSD/8GB RAM/Windows 10)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$18.124</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/asus_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Sony</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                ASUS VivoBook 15 X515 15.6" Laptop - Slate Grey (Intel Core i3-1005G1/256GB SSD/8GB RAM/Win 11 S)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/sony_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Sony</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Microsoft Surface Laptop Go 12.4in Touchscreen Intel i5 Certified Refurbished
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$399.00</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/acer_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Eastsport</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Dell XPS 13.4" Touchscreen Laptop - Silver (Intel Evo Core i7-1185G7/512GB SSD/16GB RAM/Windows 10)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/macbook_16.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Rolex</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Apple MacBook Pro 16" (2021) - Space Grey (Apple M1 Pro Chip / 512GB SSD / 16GB RAM) - Open Box
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$18.124</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/macbook_16.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Sony</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Apple MacBook Pro 16" (2021) - Space Grey (Apple M1 Pro Chip / 512GB SSD / 16GB RAM) - English
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/macbook_16.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Sony</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Apple MacBook Air 13.3" w/ Touch ID (2020) - Space Grey (Intel Core i3 1.1GHz/256GB SSD/8GB RAM)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$399.00</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/acer_silver.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Eastsport</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                HP 17.3" Laptop - Natural Silver (Intel Core i5-1135G7/1TB HDD/256GB SSD/16GB RAM/Windows 10)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/acer_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Rolex</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Dell XPS 13 13.4" Touchscreen Laptop - Silver (Intel Evo i7-1195G7/512GB SSD/16GB RAM/Win 11 Pro)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$18.124</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/sony_notebook.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Sony</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Samsung Galaxy Book 15.6" Laptop - Silver (Intel Core i5-1135G7/256GB SSD/8GB RAM/Windows 11)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/asus_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Sony</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                ASUS VivoBook 15 X515 15.6" Laptop - Grey (Intel Pentium Silver N5030/256GB SSD/8GB RAM/Windows 11)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$399.00</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/acer_silver.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Eastsport</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                HP ENVY 13.3" Laptop - Natural Silver (Intel Evo i5-1135G7/512GB SSD/8GB RAM/Windows 10)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/macbook_16.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Rolex</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Apple MacBook Pro 13.3" Retina (Intel Core i5 2.7 GHz / 8GB RAM / 128GB SSD) - Certified Refurbished
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$18.124</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/macbook_16.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Sony</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Apple MacBook Air 13.3" w/ Touch ID (2020) - Space Grey (Intel Core i3 1.1GHz/256GB SSD/8GB RAM)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/nitro_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Sony</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                Dell Inspiron 3000 15.6" Touchscreen Laptop - Black (Intel Core i5-1035G1/256GB SSD/8GB RAM/Windows 11 S)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$399.00</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/sony_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Eastsport</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                LG Gram 17" Laptop - Obsidian Black (Intel Evo Core i7-1165G7/1TB SSD/16GB RAM)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$32.50</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          <div class="product_card card_large">
+            <a href="./chosenproduct.html" class="product_card_img">
+              <img src="../public/images/products/acer_laptop.png" />
+            </a>
+            <div class="product_card_info">
+              <span class="product_card_brand">Rolex</span>
+              <a href="./chosenproduct.html" class="product_card_title">
+                HP 15.6" Touchscreen Laptop - Natural Silver (AMD Ryzen 5 5625U/1TB SSD/12GB RAM/Windows 11)
+              </a>
+              <div class="product_card_review">
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+              <img src="../public/images/icons/review.svg" />
+                <span>3,014 reviews</span>
+              </div>
+              <div class="product_card_price">
+                <strong>$18.124</strong>
+                <span>$45</span>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <!-- CLAUDE: pagination (global: .page_pagination). Boshqa sahifaga
+               o'tkazmaydi, faqat hover/active holatlari bor -->
+          <div class="page_pagination">
+            <button class="pagination_arrow prev">
+              <img src="../public/images/icons/next.svg" />
+            </button>
+            <div class="pagination_numbers">
+              <span class="pagination_number">1</span>
+              <span class="pagination_number active">2</span>
+              <span class="pagination_number">3</span>
+              <span class="pagination_number">4</span>
+              <span class="pagination_number">5</span>
+              <span class="pagination_dots">...</span>
+              <span class="pagination_number">20</span>
+            </div>
+            <button class="pagination_arrow next">
+              <img src="../public/images/icons/next.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- ===================== CLAUDE: SHOP PAGE END ===================== -->
+    </div>
+
+    <div class="footer_frame">
+      <div class="container">
+        <div class="footer_top">
+          <div class="footer_contact_box">
+            <span class="footer_contact_title">Contact Us</span>
+            <div class="footer_contact_main">
+              <img src="../public/images/icons/phone-call.svg" />
+              <div>
+                <strong>Monday-Friday: 08am-9pm</strong>
+                <span>+(1) 123 456 7890</span>
+              </div>
+            </div>
+            <div class="footer_contact_main">
+              <img src="../public/images/icons/email.svg" />
+              <div>
+                <strong>Need help with your order?</strong>
+                <span>support@zenmart.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer_support_box">
+            <span class="footer_contact_title">Customer Support</span>
+            <a href="">Contact Us</a>
+            <a href="">Help Centre</a>
+            <a href="">Returns & Exchanges</a>
+            <a href="">Best Buy Financing</a>
+            <a href="">Best Buy Gift Card </a>
+          </div>
+
+          <div class="footer_support_box">
+            <span class="footer_contact_title">Services</span>
+            <a href="">Geek Squad</a>
+            <a href="">In-Home Advisor</a>
+            <a href="">Trade-In Program </a>
+            <a href="">Electronics Recycling</a>
+            <a href=""> Best Buy Healths </a>
+          </div>
+
+          <div class="footer_media_box">
+            <div class="footer_media_main">
+              <span class="footer_contact_title">Follow us</span>
+              <div>
+                <i
+                  class="fa-brands fa-facebook-f"
+                  style="color: rgb(116, 192, 252)"
+                ></i>
+                <i
+                  class="fa-brands fa-twitter"
+                  style="color: rgb(116, 192, 252)"
+                ></i>
+                <i
+                  class="fa-brands fa-instagram"
+                  style="color: rgb(116, 192, 252)"
+                ></i>
+                <i
+                  class="fa-brands fa-linkedin"
+                  style="color: rgb(116, 192, 252)"
+                ></i>
+              </div>
+            </div>
+            <div class="footer_media_main" style="margin-top: 30px">
+              <span class="footer_contact_title">Mobile Apps</span>
+              <div class="mobile_app_box">
+                <i
+                  class="fa-brands fa-apple"
+                  style="color: rgb(116, 192, 252)"
+                ></i>
+
+                <span>iOS APP</span>
+              </div>
+              <div class="mobile_app_box">
+                <i
+                  class="fa-brands fa-android"
+                  style="color: rgb(116, 192, 252)"
+                ></i>
+                <span>Android APP</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer_media_box" style="justify-content: flex-end">
+            <div class="footer_media_main">
+              <span class="footer_contact_title">We accept</span>
+              <div class="card_box">
+                <img src="../public/images/icons/visa.png" />
+                <img src="../public/images/icons/master_card.png" />
+                <img src="../public/images/icons/apple_pay.png" />
+                <img src="../public/images/icons/dicvover.png" />
+                <img src="../public/images/icons/paypal.png" />
+                <img src="../public/images/icons/amex.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          <div class="footer_main">
+            <div class="footer_bottom_left">
+              <span>© 2022 Zenmart. All Rights Reserved</span>
+              <span style="margin-left: 66px">Privacy · Terms · Sitemap</span>
+            </div>
+
+            <div class="footer_bottom_right">
+              <div class="footer_select_box">
+                <span>Currency</span>
+                <select>
+                  <option value="" selected>USD</option>
+                  <option value="">Won</option>
+                </select>
+              </div>
+              <div class="footer_select_box" style="margin-left: 20px">
+                <span>Language</span>
+                <select>
+                  <option value="" selected>English</option>
+                  <option value="">Korean</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CLAUDE: kichik JS — faqat active holatlarini almashtiradi
+         (boshqa sahifaga o'tkazmaydi) -->
+    <script>
+      // CLAUDE: bitta guruh ichida bosilgan elementga "active" klassini beradi
+      function setActiveOnClick(groupSelector, itemSelector) {
+        document.querySelectorAll(groupSelector).forEach(function (group) {
+          var items = group.querySelectorAll(itemSelector);
+          items.forEach(function (item) {
+            item.addEventListener("click", function (e) {
+              if (item.tagName === "A" && item.getAttribute("href") === "#") {
+                e.preventDefault();
+              }
+              items.forEach(function (el) {
+                el.classList.remove("active");
+              });
+              item.classList.add("active");
+            });
+          });
+        });
+      }
+
+      setActiveOnClick(".category_slider_frame .container", ".category_slider_link");
+      setActiveOnClick(".brand_wrapper", ".brand_btn");
+      setActiveOnClick(".slider_dot_wrapper", ".slider_dot");
+      setActiveOnClick(".pagination_numbers", ".pagination_number");
+
+      // CLAUDE: pagination strelkalari active raqamni oldinga/orqaga suradi
+      document.querySelectorAll(".page_pagination").forEach(function (box) {
+        var numbers = box.querySelectorAll(".pagination_number");
+        function move(step) {
+          var list = Array.prototype.slice.call(numbers);
+          var index = list.findIndex(function (el) {
+            return el.classList.contains("active");
+          });
+          var next = Math.min(Math.max(index + step, 0), list.length - 1);
+          list[index].classList.remove("active");
+          list[next].classList.add("active");
+        }
+        box.querySelector(".pagination_arrow.prev").addEventListener("click", function () {
+          move(-1);
+        });
+        box.querySelector(".pagination_arrow.next").addEventListener("click", function () {
+          move(1);
+        });
+      });
+    </script>
+  </body>
+</html>

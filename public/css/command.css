@@ -1,3 +1,7 @@
+:root {
+  --font_family: "Jost";
+}
+
 html,
 body {
   margin: 0;
@@ -75,7 +79,7 @@ p {
   outline: none;
   color: rgba(4, 30, 66, 1);
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: Regular;
   font-size: 15px;
   font-weight: 400;
@@ -93,7 +97,7 @@ p {
   border: none;
   outline: none;
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
@@ -152,7 +156,7 @@ p {
 .navbar_frame .info_box span {
   color: rgba(255, 255, 255, 1);
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: Bold;
   font-size: 16px;
   font-weight: 400;
@@ -164,7 +168,7 @@ p {
 .navbar_frame .info_box strong {
   color: rgba(255, 255, 255, 1);
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: Bold;
   font-size: 16px;
   font-weight: 500;
@@ -187,7 +191,7 @@ p {
   justify-content: center;
   align-items: center;
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: Bold;
   font-size: 8px;
   font-weight: 700;
@@ -222,7 +226,7 @@ p {
   margin-left: 10px;
   color: rgba(255, 255, 255, 1);
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: Medium;
   font-size: 16px;
   font-weight: 500;
@@ -245,7 +249,7 @@ p {
 
 .navbar_frame .navbar_route_menu a {
   margin-right: 10px;
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: Medium;
   font-size: 16px;
   font-weight: 500;
@@ -261,7 +265,7 @@ p {
   margin-right: 20px;
   color: rgba(255, 255, 255, 1);
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-size: 16px;
   font-weight: 400;
 }
@@ -283,7 +287,7 @@ p {
   color: rgba(4, 30, 66, 1);
   display: flex;
   margin-bottom: 30px;
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: Medium;
   font-size: 18px;
   font-weight: 500;
@@ -324,7 +328,7 @@ p {
 .footer_frame .footer_contact_main div strong {
   color: rgba(4, 30, 66, 1);
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: normal;
   font-size: 15px;
   font-weight: 500;
@@ -334,7 +338,7 @@ p {
 .footer_frame .footer_contact_main div span {
   color: rgba(4, 30, 66, 1);
   margin-top: 10px;
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: normal;
   font-size: 15px;
   font-weight: 400;
@@ -350,7 +354,7 @@ p {
 .footer_frame .footer_support_box a {
   color: rgba(4, 30, 66, 1);
   margin-bottom: 20px;
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: Regular;
   font-size: 14px;
   font-weight: 400;
@@ -383,7 +387,7 @@ p {
 .footer_frame .footer_media_main .mobile_app_box span {
   color: rgba(4, 30, 66, 1);
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-size: 14px;
   font-weight: 400;
 }
@@ -419,7 +423,7 @@ p {
 .footer_frame .footer_bottom .footer_main .footer_bottom_left span {
   color: rgba(4, 30, 66, 1);
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-size: 14px;
   font-weight: 400;
   line-height: 40px;
@@ -440,7 +444,7 @@ p {
 .footer_frame .footer_bottom_right span {
   color: rgba(98, 105, 116, 1);
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: normal;
   font-size: 14px;
   font-weight: 400;
@@ -450,11 +454,412 @@ p {
 .footer_frame .footer_bottom_right select {
   color: rgba(4, 30, 66, 1);
 
-  font-family: "Jost";
+  font-family: var(--font_family);
   font-style: normal;
   font-size: 14px;
   font-weight: 400;
   line-height: 40px;
   border: none;
   outline: none;
+}
+
+/* =====================================================================
+   CLAUDE: GLOBAL KLASSLAR — shu qatordan pastini Claude yozgan.
+   Bu klasslar bir nechta sahifada qayta ishlatiladi (shop, product va h.k.)
+   Yuqoridagi eski kodlarga tegilmagan.
+   ===================================================================== */
+
+/* CLAUDE: Section head — bo'lim sarlavhasi (chapda title, o'ngda link) */
+.section_head {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section_title {
+  color: rgba(4, 30, 66, 1);
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+}
+
+/* CLAUDE: "View All ..." link — hover bo'lganda tagida border chiqadi */
+.view_all_link {
+  position: relative;
+  padding-bottom: 5px;
+  color: rgba(4, 30, 66, 1);
+  cursor: pointer;
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.view_all_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: rgba(4, 30, 66, 1);
+  transition: width 0.3s ease;
+}
+
+.view_all_link:hover::after {
+  width: 100%;
+}
+
+/* CLAUDE: Sariq tugma (Figma: Large-Button-Radius-6) */
+.btn_yellow {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 52px;
+  padding: 15px 35px;
+  box-sizing: border-box;
+  border: 1px solid rgba(245, 195, 75, 1);
+  border-radius: 6px;
+  background: rgba(245, 195, 75, 1);
+  box-shadow: 0px 5px 20px 0px rgba(245, 195, 75, 0.15);
+  color: rgba(4, 30, 66, 1);
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.btn_yellow:hover {
+  border-color: rgba(232, 179, 54, 1);
+  background: rgba(232, 179, 54, 1);
+}
+
+/* CLAUDE: Breadcrumb — "Home / Electronics / ..." */
+.breadcrumb_frame {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.breadcrumb_frame .container {
+  flex-direction: row;
+  align-items: center;
+}
+
+.breadcrumb_frame a,
+.breadcrumb_frame span {
+  color: rgba(4, 30, 66, 1);
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.breadcrumb_frame span {
+  margin: 0 8px;
+}
+
+.breadcrumb_frame a:hover {
+  color: rgba(0, 83, 246, 1);
+}
+
+/* CLAUDE: Slider nuqtalari + strelka (Figma: Arrow-Bullet) */
+.slider_dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.slider_dots .slider_dot_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.slider_dots .slider_dot {
+  margin: 0 1px;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.slider_dots .slider_dot div {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(17, 33, 55, 1);
+}
+
+.slider_dots .slider_dot:hover {
+  border-color: rgba(17, 33, 55, 0.3);
+}
+
+.slider_dots .slider_dot.active {
+  border-color: rgba(17, 33, 55, 1);
+}
+
+.slider_dots .slider_arrow {
+  margin-left: 20px;
+  transform: scaleX(-1);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.slider_dots .slider_arrow:hover {
+  opacity: 0.6;
+}
+
+/* CLAUDE: Product card — mahsulot kartochkasi.
+   .product_card            -> kichik (Top Selling, 221x392)
+   .product_card.card_large -> katta (mahsulotlar ro'yxati, 264x452) */
+.product_card {
+  position: relative;
+  width: calc(100% + 1px); /* qo'shni kartalar borderi ustma-ust tushadi */
+  height: 392px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(234, 234, 234, 1);
+  background: rgba(255, 255, 255, 1);
+  transition: box-shadow 0.25s ease;
+}
+
+.product_card:hover {
+  z-index: 2;
+  box-shadow: 0px 5px 20px 0px rgba(0, 83, 246, 0.1);
+}
+
+.product_card .product_card_img {
+  width: 100%;
+  height: 221px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.product_card .product_card_img img {
+  max-width: 179px;
+  max-height: 190px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product_card:hover .product_card_img img {
+  transform: scale(1.05);
+}
+
+.product_card .product_card_info {
+  padding: 0 19px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product_card .product_card_brand {
+  color: rgba(98, 105, 116, 1);
+  text-transform: uppercase;
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.product_card .product_card_title {
+  margin-top: 7px;
+  height: 56px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: rgba(4, 30, 66, 1);
+  transition: color 0.2s ease;
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.product_card .product_card_title:hover {
+  color: rgba(0, 83, 246, 1);
+}
+
+.product_card .product_card_review {
+  margin-top: 7px;
+  height: 22px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.product_card .product_card_review img {
+  margin-right: 4px;
+  width: 10px;
+  height: 10px;
+}
+
+.product_card .product_card_review span {
+  margin-left: 5px;
+  color: rgba(98, 105, 116, 1);
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.product_card .product_card_price {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.product_card .product_card_price strong {
+  color: rgba(4, 30, 66, 1);
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.product_card .product_card_price span {
+  margin-left: 10px;
+  color: rgba(98, 105, 116, 1);
+  text-decoration-line: line-through;
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* katta varianti */
+.product_card.card_large {
+  height: 452px;
+}
+
+.product_card.card_large .product_card_img {
+  height: 281px;
+}
+
+.product_card.card_large .product_card_img img {
+  max-width: 216px;
+  max-height: 230px;
+}
+
+/* CLAUDE: Pagination — raqamli sahifalash (Figma: panigation) */
+.page_pagination {
+  margin: 60px auto 0;
+  width: 460px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page_pagination .pagination_arrow {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(234, 234, 234, 1);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.page_pagination .pagination_arrow.next {
+  border-color: rgba(17, 33, 55, 1);
+}
+
+.page_pagination .pagination_arrow img {
+  width: 14px;
+  height: 14px;
+}
+
+.page_pagination .pagination_arrow.next img {
+  transform: scaleX(-1);
+}
+
+.page_pagination .pagination_arrow:hover {
+  border-color: rgba(17, 33, 55, 1);
+  background: rgba(243, 245, 246, 1);
+}
+
+.page_pagination .pagination_numbers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.page_pagination .pagination_number,
+.page_pagination .pagination_dots {
+  margin: 0 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: rgba(5, 16, 54, 1);
+
+  font-family: var(--font_family);
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.page_pagination .pagination_number {
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.page_pagination .pagination_number:hover {
+  background: rgba(243, 245, 246, 1);
+}
+
+.page_pagination .pagination_number.active {
+  background: rgba(245, 195, 75, 1);
+  color: rgba(4, 30, 66, 1);
 }
